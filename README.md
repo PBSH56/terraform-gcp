@@ -16,6 +16,6 @@ Terraform apply
 ### terraform.tfvars variable declaration :
 
 - bucket_name    = "xxxxxxxxxxxxx"
-- roles          = "VIEWER"
+- roles          = "READER"
 - entity         = "allUsers"
 - backend_bucket = "xxxxxxxxxxxxx"
