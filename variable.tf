@@ -10,4 +10,7 @@ variable "entity" {
   type = string
 }
 
+variable "backend_bucket" {
+  type = string
+}
 

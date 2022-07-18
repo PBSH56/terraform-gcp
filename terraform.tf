@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket      = "tf-backend-bucket003434"
+    bucket      = var.backend_bucket
     prefix      = "tfbackend"
     credentials = "key.json"
   }
