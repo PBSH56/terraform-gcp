@@ -13,3 +13,9 @@ Terraform plan
 ```
 Terraform apply
 ```
+### terraform.tfvars variable declaration :
+
+> bucket_name    = "xxxxxxxxxxxxx"
+> roles          = "VIEWER"
+> entity         = "allUsers"
+> backend_bucket = "xxxxxxxxxxxxx"
