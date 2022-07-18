@@ -6,9 +6,9 @@ terraform {
       version = "4.28.0"
     }
   }
-    backend "gcs" {
-    bucket  = "tf-backend-bucket003434"
-    prefix = "tfbackend"
+  backend "gcs" {
+    bucket      = "tf-backend-bucket003434"
+    prefix      = "tfbackend"
     credentials = "key.json"
   }
 }

@@ -25,11 +25,11 @@ data "google_storage_bucket_object" "picture" {
   bucket = google_storage_bucket.my_storage.name
 }
 
-resource "null_resource" "local-exec" {
-    provisioner "local-exec" {
-    command ="wget -O email.csv '${data.google_storage_bucket_object.picture.media_link}'"
-  }
-}
+# resource "null_resource" "local-exec" {
+#   provisioner "local-exec" {
+#     command = "wget -O email.csv '${data.google_storage_bucket_object.picture.media_link}'"
+#   }
+# }
 
 
 
