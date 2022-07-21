@@ -22,4 +22,17 @@ variable "entity" {
   type = string
 }
 
+variable "jobloadid" {
+  type = string
+}
 
+
+variable "user_table" {
+  type = string
+  default = "user_table"
+}
+
+variable "user_data_csv" {
+  type = string
+  default = "user-data"
+}

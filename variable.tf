@@ -10,7 +10,6 @@ variable "entity" {
   type = string
 }
 
-variable "backend_bucket" {
+variable "jobid" {
   type = string
 }
-

@@ -6,6 +6,7 @@ module "shop_database" {
   source_name = " shop_data"
   role        = var.roles
   entity      = var.entity
+  jobloadid   = var.jobid
 }
 
 
