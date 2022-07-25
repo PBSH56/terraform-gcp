@@ -1,15 +1,15 @@
 # Create dataset in bigquery
 resource "google_bigquery_dataset" "shop_dataset" {
-  dataset_id = "shop45_dataset"
-  location   = "US"
+  dataset_id = var.dataset
+  location   = var.location
 }
 
 # Create table in bigquery
 resource "google_bigquery_table" "shop_table" {
   dataset_id          = google_bigquery_dataset.shop_dataset.dataset_id
-  project             = "t-12-vm"
-  table_id            = "shop_data"
-  description         = "This table contain sales data of Shop45"
+  project             = var.project_id
+  table_id            = var.table_name
+  description         = var.table_description
   deletion_protection = false
 
 
@@ -82,7 +82,7 @@ resource "google_bigquery_job" "export_jab" {
 
 
   }
-  depends_on = [time_sleep.wait_30_seconds]
+  depends_on = [time_sleep.wait_60_seconds]
 }
 
 
@@ -95,7 +95,7 @@ byte_length = 8
 
 resource "null_resource" "previous" {}
 
-resource "time_sleep" "wait_30_seconds" {
+resource "time_sleep" "wait_60_seconds" {
   depends_on = [null_resource.previous]
 
   create_duration = "60s"
