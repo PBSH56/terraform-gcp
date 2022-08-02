@@ -10,6 +10,7 @@ terraform {
     bucket      = "tf-backend-bucket003434"
     prefix      = "tfbackend"
     credentials = "key.json"
+   
   }
 }
 

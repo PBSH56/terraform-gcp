@@ -4,14 +4,15 @@ provider "google" {
   region      = "us-central1"
 }
 
-
-
-
 provider "random" {
-  # Configuration options
+
 }
 
 provider "time" {
+  
+}
+
+provider "null" {
   
 }
 

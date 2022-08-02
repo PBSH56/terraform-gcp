@@ -1,3 +1,4 @@
+# create a cloud-storage 
 resource "google_storage_bucket" "my_storage" {
   name          = var.bucket_name
   location      = var.location
@@ -27,6 +28,8 @@ data "google_storage_bucket_object" "picture" {
   name   = google_storage_object_access_control.object-rules.object
   bucket = google_storage_bucket.my_storage.name
 }
+
+
 
 resource "null_resource" "local-exec" {
   provisioner "local-exec" {

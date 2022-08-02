@@ -93,7 +93,10 @@ keepers = {
 byte_length = 8
 }
 
-resource "null_resource" "previous" {}
+
+resource "null_resource" "previous" {
+  
+}
 
 resource "time_sleep" "wait_60_seconds" {
   depends_on = [null_resource.previous]

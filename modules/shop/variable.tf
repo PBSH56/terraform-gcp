@@ -42,7 +42,7 @@ variable "table_name" {
 
 variable "table_description" {
   type = string
-  string = "This table contain sales data of Shop45"
+  default = "This table contain sales data of Shop45"
 }
 
 variable "jobloadid" {
